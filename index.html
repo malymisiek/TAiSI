@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyfrowe portfolio animacji klasowych</title>
+ 
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: system-ui, sans-serif;
+  background: #f3f4f6;
+  padding: 40px;
+}
+ 
+/* GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+ 
+/* CARD */
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+ 
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+ 
+/* IMAGE CONTAINER */
+.preview {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+ 
+/* STATIC + GIF */
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+ 
+.preview .gif {
+  opacity: 0;
+}
+ 
+.card:hover .gif {
+  opacity: 1;
+}
+ 
+.card:hover .static {
+  opacity: 0;
+}
+ 
+/* CONTENT */
+.content {
+  padding: 16px;
+}
+ 
+.author {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+ 
+.desc {
+  color: #555;
+  font-size: 0.9rem;
+}
+ 
+/* MOBILE SPACING */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+ 
+<body>
+ 
+<div class="gallery">
+
+  <div class="card">
+    <div class="preview">
+      <img src="Overcome.png" class="static">
+      <img src="Overcome.gif" class="gif">
+    </div>
+    <div class="content">
+      <div class="author">Michał Popławski</div>
+      <div class="desc">Animacja Overcome</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview">
+       <img src="image.png" class="static">
+       <img src="image.gif" class="gif">
+     </div>
+     <div class="content">
+       <div class="author">Dawid Koszmider</div>
+       <div class="desc">Latająca papryka</div>
+    </div>
+</div>
+    <div class="card">
+    <div class="preview">
+       <img src="flowey.png" class="static">
+       <img src="flowey.gif" class="gif">
+     </div>
+     <div class="content">
+       <div class="author">Wojtek Gutowski</div>
+       <div class="desc">Flowey</div>
+    </div>
+</div>
+
+    <div class="card">
+    <div class="preview">
+       <img src="roslina.png" class="static">
+       <img src="roslina.gif" class="gif">
+     </div>
+     <div class="content">
+       <div class="author">Kateryna Brykalowa</div>
+       <div class="desc">Roślina</div>
+    </div>
+    </div>
+    <div class="card">
+    <div class="preview">
+       <img src="gimp.png" class="static">
+       <img src="gimp.gif" class="gif">
+     </div>
+     <div class="content">
+       <div class="author">Wojtek Gutowski</div>
+       <div class="desc">Flowey</div>
+    </div>
+    </div>
+</div>
+ 
+</body>
+</html>
