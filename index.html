@@ -16,9 +16,20 @@ body {
   font-family: system-ui, sans-serif;
   background: #f3f4f6;
   padding: 40px;
+  background-image: linear-gradient(#f3f4f6 5%, #636363 50%, #f3f4f6 100%);
 }
- 
-/* GRID */
+
+header {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 130, 0.486);
+  transition: 0.3s ease;
+  padding-bottom: 5px; 
+  padding-top: 5px; 
+  text-align: center;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -27,7 +38,6 @@ body {
   margin: auto;
 }
  
-/* CARD */
 .card {
   background: white;
   border-radius: 16px;
@@ -38,10 +48,9 @@ body {
  
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(130, 0, 0, 0.582);
 }
  
-/* IMAGE CONTAINER */
 .preview {
   position: relative;
   width: 100%;
@@ -49,7 +58,6 @@ body {
   overflow: hidden;
 }
  
-/* STATIC + GIF */
 .preview img {
   width: 100%;
   height: 100%;
@@ -70,7 +78,6 @@ body {
   opacity: 0;
 }
  
-/* CONTENT */
 .content {
   padding: 16px;
 }
@@ -85,7 +92,6 @@ body {
   font-size: 0.9rem;
 }
  
-/* MOBILE SPACING */
 @media (max-width: 600px) {
   body {
     padding: 20px;
@@ -95,13 +101,14 @@ body {
 </head>
  
 <body>
- 
+ <header><h1>Portfolio</h1></header>
+ <br>
 <div class="gallery">
 
   <div class="card">
     <div class="preview">
-      <img src="Overcome.png" class="static">
-      <img src="Overcome.gif" class="gif">
+      <img src="Overcome.png" class="static" alt="Overcome static">
+      <img src="Overcome.gif" class="gif" alt="Overcome animated">
     </div>
     <div class="content">
       <div class="author">Michał Popławski</div>
@@ -111,8 +118,8 @@ body {
 
   <div class="card">
     <div class="preview">
-       <img src="image.png" class="static">
-       <img src="image.gif" class="gif">
+       <img src="image.png" class="static" alt="image static">
+       <img src="image.gif" class="gif" alt="image animated">
      </div>
      <div class="content">
        <div class="author">Dawid Koszmider</div>
@@ -121,8 +128,8 @@ body {
 </div>
     <div class="card">
     <div class="preview">
-       <img src="flowey.png" class="static">
-       <img src="flowey.gif" class="gif">
+       <img src="flowey.png" class="static" alt="flowey static">
+       <img src="flowey.gif" class="gif" alt="flowey animated">
      </div>
      <div class="content">
        <div class="author">Wojtek Gutowski</div>
@@ -132,8 +139,8 @@ body {
 
     <div class="card">
     <div class="preview">
-       <img src="roslina.png" class="static">
-       <img src="roslina.gif" class="gif">
+       <img src="roslina.png" class="static" alt="roślina static">
+       <img src="roslina.gif" class="gif" alt="roślina animated">
      </div>
      <div class="content">
        <div class="author">Kateryna Brykalowa</div>
@@ -142,8 +149,8 @@ body {
     </div>
     <div class="card">
     <div class="preview">
-       <img src="gimp.png" class="static">
-       <img src="gimp.gif" class="gif">
+       <img src="gimp.png" class="static" alt="gimp static">
+       <img src="gimp.gif" class="gif" alt="gimp animated">
      </div>
      <div class="content">
        <div class="author">Bory Kniaź-Rzeszotarski</div>
@@ -152,8 +159,8 @@ body {
     </div>
     <div class="card">
     <div class="preview">
-       <img src="act.png" class="static">
-       <img src="act.gif" class="gif">
+       <img src="act.png" class="static" alt="act static">
+       <img src="act.gif" class="gif" alt="act animated">
      </div>
      <div class="content">
        <div class="author">Olek Mastela</div>
