@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<title>Karty</title>
+<title>Karty Binarne</title>
 <style>
 img {
 height: 100px;
@@ -13,20 +13,19 @@ widht: auto;
 
 <h2>Suma: <span id="suma">0</span></h2>
 
-<!-- KARTY -->
-<img src="reverse.png" onclick="click(this,1)">
-<img src="reverse.png" onclick="click(this,2)">
-<img src="reverse.png" onclick="click(this,4)">
-<img src="reverse.png" onclick="click(this,8)">
-<img src="reverse.png" onclick="click(this,16)">
-<img src="reverse.png" onclick="click(this,32)">
-<img src="reverse.png" onclick="click(this,64)">
-<img src="reverse.png" onclick="click(this,128)">
+<img src="reverse.png" onclick="tap(this,1)">
+<img src="reverse.png" onclick="tap(this,2)">
+<img src="reverse.png" onclick="tap(this,4)">
+<img src="reverse.png" onclick="tap(this,8)">
+<img src="reverse.png" onclick="tap(this,16)">
+<img src="reverse.png" onclick="tap(this,32)">
+<img src="reverse.png" onclick="tap(this,64)">
+<img src="reverse.png" onclick="tap(this,128)">
 
 <script>
 let suma = 0;
 
-function click(el, val){
+function tap(el, val){
     if(el.alt != "on"){
         el.src = val + ".png";
         el.alt = "on";
