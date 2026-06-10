@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudoklasy i pseudoelementy</title>
+
+<style>
+a:hover {
+    color: red;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+input:focus {
+    border: 2px solid blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    color: green;
+}
+
+tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+.menu a:not(.active) {
+    opacity: 0.7;
+}
+
+input:checked + label {
+    color: green;
+    font-weight: bold;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+h2::before {
+    content: "★ ";
+    color: orange;
+}
+
+h2::after {
+    content: " ★";
+    color: orange;
+}
+
+p::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+::selection {
+    background: yellow;
+    color: black;
+}
+
+input::placeholder {
+    color: gray;
+    font-style: italic;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 300px;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Przykład pseudoklas i pseudoelementów</h1>
+
+<nav class="menu">
+    <a href="#" class="active">Strona główna</a> |
+    <a href="https://example.com">O nas</a> |
+    <a href="https://google.com">Kontakt</a>
+</nav>
+
+<hr>
+
+<h2>Nagłówek sekcji</h2>
+
+<p>
+    Ten akapit pokazuje działanie pseudoelementu first-letter.
+    Spróbuj zaznaczyć fragment tekstu myszką.
+</p>
+
+<hr>
+
+<h3>Formularz</h3>
+
+<input type="text" placeholder="Wpisz swoje imię">
+
+<br><br>
+
+<input type="checkbox" id="zgoda">
+<label for="zgoda">Akceptuję regulamin</label>
+
+<br><br>
+
+<button>Aktywny przycisk</button>
+<button disabled>Wyłączony przycisk</button>
+
+<hr>
+
+<h3>Lista</h3>
+
+<ul>
+    <li>Pierwszy element</li>
+    <li>Drugi element</li>
+    <li>Trzeci element</li>
+    <li>Ostatni element</li>
+</ul>
+
+<hr>
+
+<h3>Tabela</h3>
+
+<table>
+    <tr>
+        <th>Nr</th>
+        <th>Produkt</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Monitor</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Klawiatura</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Myszka</td>
+    </tr>
+</table>
+
+</body>
+</html>
